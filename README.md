@@ -40,20 +40,18 @@ Greet someone
 ### Example usage
 
 ```yaml
-on: [push]
-
+name: Build and push image to quay.io
+on:
+  release:
+    types: [created]
 jobs:
-  hello_world_job:
+  build-push-image:
     runs-on: ubuntu-latest
-    name: A job to say hello
     steps:
-      - uses: actions/checkout@v2
-      - id: foo
-        uses: actions/hello-world-composite-action@v1
+      - uses: catalystsquad/action-build-push-image-quay@v1
         with:
-          who-to-greet: "Mona the Octocat"
-      - run: echo random-number ${{ steps.foo.outputs.random-number }}
-        shell: bash
+          username: ${{ secrets.QUAY_DOCKER_REGISTRY_USER }}
+          password: ${{ secrets.QUAY_DOCKER_REGISTRY_PASSWORD }}
 ```
 
 <!-- end examples -->
