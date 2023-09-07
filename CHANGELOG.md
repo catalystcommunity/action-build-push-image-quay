@@ -1,3 +1,10 @@
+# 1.0.0 (2023-09-07)
+
+
+### Features
+
+* initial action ([#1](https://github.com/catalystsquad/action-build-push-image-quay/issues/1)) ([ce2c4db](https://github.com/catalystsquad/action-build-push-image-quay/commit/ce2c4dbe1d2a3bbcab49e79a41b8fa0e3cacd1c4))
+
 # 1.0.0 (2022-02-28)
 
 
