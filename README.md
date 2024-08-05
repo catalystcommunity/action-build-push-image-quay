@@ -13,7 +13,7 @@ Builds and pushs an image to a quay.io image repository
 <!-- start usage -->
 
 ```yaml
-- uses: catalystsquad/action-build-push-image-quay@undefined
+- uses: catalystcommunity/action-build-push-image-quay@undefined
   with:
     # The full name of the repository where the image will be pushed. Default is the
     # GitHub repository name, ex: organization/repository.
@@ -86,7 +86,7 @@ jobs:
   build-push-image:
     runs-on: ubuntu-latest
     steps:
-      - uses: catalystsquad/action-build-push-image-quay@v1
+      - uses: catalystcommunity/action-build-push-image-quay@v1
         with:
           username: ${{ secrets.QUAY_DOCKER_REGISTRY_USER }}
           password: ${{ secrets.QUAY_DOCKER_REGISTRY_PASSWORD }}
