@@ -72,7 +72,7 @@ runs:
       tags: ${{ steps.get-tags.outputs.tags }}
       secrets: ${{ inputs.build-secrets }}
       context: ${{ inputs.docker-context }}
-      file: ${{ inputs.docker-file }}
+      file: ${{ inputs.docker-context }}/${{ inputs.docker-file }}
       cache-from: type=gha,mode=max
       cache-to: type=gha,mode=max
       no-cache: ${{ contains(github.event.head_commit.message, 'no-cache') }}
